@@ -1,0 +1,65 @@
+[
+    {
+        "id": "sd_Y5sEn6b19tRfNHy0",
+        "type": "tab",
+        "createdDate": "2021-03-11T08:06:12.071Z",
+        "relativeParentPath": "",
+        "label": "getIncList",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "getIncList"
+    },
+    {
+        "id": "sd_J8oalTOmyobUmXWf",
+        "type": "Start",
+        "z": "sd_Y5sEn6b19tRfNHy0",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "getinclist",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "datalist",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "getinclist",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 40,
+        "y": 40,
+        "wires": [
+            [
+                "sd_2XLa7v9cB0Oyv21m"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "getIncList"
+    },
+    {
+        "id": "sd_2XLa7v9cB0Oyv21m",
+        "type": "Script",
+        "z": "sd_Y5sEn6b19tRfNHy0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "",
+        "functionName": "sd_2XLa7v9cB0Oyv21m",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 165,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]

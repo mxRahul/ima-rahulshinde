@@ -1,0 +1,14 @@
+{
+    "appPageId": "70c4a691-dde2-d45e-e2d5-45e92cf6263a",
+    "appPageName": "listIncidencepage",
+    "componentName": "listincidencepageComponent",
+    "selectorName": "bh-listincidencepage",
+    "htmlFileName": "listincidencepage.template.html",
+    "tsFileName": "listincidencepage.component.ts",
+    "createDate": "2021-03-09T16:18:55.861Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

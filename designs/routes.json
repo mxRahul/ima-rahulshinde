@@ -1,0 +1,44 @@
+{
+    "routes": [
+        {
+            "path": "home",
+            "component": "homeComponent",
+            "canActivate": ""
+        },
+        {
+            "path": "addIncidence",
+            "component": "addincidencepageComponent"
+        },
+        {
+            "path": "listData",
+            "component": "listincidencepageComponent"
+        },
+        {
+            "path": "loginpage",
+            "component": "loginpageComponent"
+        },
+        {
+            "path": "samplepage",
+            "component": "samplepageComponent"
+        },
+        {
+            "path": "login",
+            "component": "loginComponent"
+        },
+        {
+            "path": "updatepage",
+            "component": "updatepageComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "loginpage",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "",
+            "redirectTo": "loginpage"
+        }
+    ]
+}

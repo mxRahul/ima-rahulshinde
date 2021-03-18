@@ -1,0 +1,22 @@
+{
+    "76744e84-869a-a5bf-1645-f41f06496247": {
+        "dataModelId": "76744e84-869a-a5bf-1645-f41f06496247",
+        "name": "userdata",
+        "description": "userdata",
+        "dataSource": "neutrinos-training-rt",
+        "fields": [
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false,
+                "type": "string"
+            }
+        ]
+    }
+}

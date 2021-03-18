@@ -1,0 +1,32 @@
+<form [formGroup]="loginForm">
+  <div fxLayout="column wrap" style="padding-top:30px" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <div fxLayout="column wrap" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false"><label>
+              Enter User Name</label>
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="User Name" [required]="false" formControlName="userName">
+              <mat-error align="start" *ngIf="loginForm.controls.userName.errors?.required">Enter user name</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><label>
+              Enter Password</label>
+            <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput placeholder="Password" [required]="false" formControlName="password">
+              <mat-error align="start" *ngIf="loginForm.controls.password.errors?.required">Enter password</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="accent" (click)="login()">LOGIN</button><button mat-raised-button (click)="Loginneutrinos()">Login Neutrinos</button></div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+            <bh-samplepage [receiveduserName]="userdetails" (res)="renderchildmessage($event)" *ngIf="childView"></bh-samplepage>
+            <div *ngIf="childMeessageView">
+              <p>Message from child</p>
+              <p>{{childmessage}}</p>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>

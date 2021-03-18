@@ -1,0 +1,39 @@
+<form [formGroup]="firstFormGroup">
+  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <h4>
+            Add Incidence </h4>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Subject" [required]="true" formControlName="subject">
+            <mat-error align="start" *ngIf="firstFormGroup.controls.subject.errors?.required">Enter alphabate only</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Description" [required]="false" formControlName="description">
+            <mat-error align="start" *ngIf="firstFormGroup.controls.description.errors?.required">Enter only alphabets and number</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Priority" [required]="false" formControlName="priority">
+            <mat-error align="start" *ngIf="firstFormGroup.controls.priority.errors?.required">Enter valid priority</mat-error>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" formControlName="dateValue">
+          <mat-form-field style="width:210px" [appearance]="&apos;outline&apos;">
+            <input matInput placeholder="Incidence date" [matDatepicker]="picker" (dateChange)="onDate($event)" [required]="true" [disabled]="false">
+            <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
+            <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button style="width:210px" routerLink="/home" color="primary" (click)="onSubmit()">Submit</button></div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>

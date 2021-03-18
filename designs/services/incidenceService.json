@@ -1,0 +1,356 @@
+[
+    {
+        "id": "sd_xcFnwLccCDo3wjhi",
+        "type": "tab",
+        "createdDate": "2021-03-11T14:37:01.910Z",
+        "relativeParentPath": "",
+        "label": "incidenceService",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_Zm23mkZFnXDdZdAr",
+        "type": "CallSSDApi",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "getalldata",
+        "method": "get",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "/getallicidence",
+        "url": "/getallicidence",
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "reqBody": "",
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "getalldata",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 185,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_dGGNDnfNFGrhODsr",
+        "type": "Start",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "getdata",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getdata",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Zm23mkZFnXDdZdAr"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_tY7k7IfL4H1zKBNN",
+        "type": "Start",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "addincidence",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "body",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "addincidence",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 160,
+        "wires": [
+            [
+                "sd_7gxmYzV5z9GHEgKl"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_7gxmYzV5z9GHEgKl",
+        "type": "CallSSDApi",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "adddata",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlValue": "/addincidence",
+        "url": "/addincidence",
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "adddata",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 185,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_z36zjEVt0PIwYHzv",
+        "type": "Start",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "deletedata",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "body",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "deletedata",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 280,
+        "wires": [
+            [
+                "sd_mNKZBaI06EMon0wt"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_mNKZBaI06EMon0wt",
+        "type": "CallSSDApi",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlValue": "/deleteicidence",
+        "url": "/deleteicidence",
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "reqBody": "bh.local.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "sd_mNKZBaI06EMon0wt",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 220,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_LL1Or25Wcj0GAfvF",
+        "type": "Start",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "updatedata",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "body",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "updatedata",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 400,
+        "wires": [
+            [
+                "sd_UcgsCiUPfhDMAJla"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_UcgsCiUPfhDMAJla",
+        "type": "CallSSDApi",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "put",
+        "methodMappingObj": {},
+        "urlValue": "/updateicidence",
+        "url": "/updateicidence",
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.local.body.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "body.body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {
+            "_id": "bh.local.body.id"
+        },
+        "paramsObj": [
+            {
+                "key": "_id",
+                "defaultValue": "bh.local.body.id"
+            }
+        ],
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "sd_UcgsCiUPfhDMAJla",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 225,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]

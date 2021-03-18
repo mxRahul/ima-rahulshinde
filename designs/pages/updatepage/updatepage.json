@@ -1,0 +1,14 @@
+{
+    "appPageId": "8ec78176-d1d0-1c37-d81c-814b6bb8a724",
+    "appPageName": "updatepage",
+    "componentName": "updatepageComponent",
+    "selectorName": "bh-updatepage",
+    "htmlFileName": "updatepage.template.html",
+    "tsFileName": "updatepage.component.ts",
+    "createDate": "2021-03-18T06:46:03.795Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}
