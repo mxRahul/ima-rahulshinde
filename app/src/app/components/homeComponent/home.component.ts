@@ -53,14 +53,16 @@ export class homeComponent extends NBaseComponent implements OnInit {
 
 
    async deleterecord(e) {
-       const reqbody = { body: {
-            "filter": {
-                 "_id": e
-         }
-       }}
-       const resultData = (await this.clientService.deletedata(reqbody))
-       console.log('result ', resultData)
-       this.ngOnInit()
+       if (confirm("Are you sure?")) {
+        const reqbody = { body: {
+                "filter": {
+                    "_id": e
+            }
+        }}
+        const resultData = (await this.clientService.deletedata(reqbody))
+        console.log('result ', resultData)
+        this.ngOnInit()
+       }
     }
 
 

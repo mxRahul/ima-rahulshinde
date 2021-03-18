@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" style="background-color:yellow" fxLayoutGap="1080px" fxLayoutAlign="none stretch" [fxShow]="true" [fxHide]="false">
+<div fxLayout="row " class="header" fxLayoutAlign="space-between center" [fxShow]="true" [fxHide]="false">
   <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="start end" [fxShow]="true" [fxHide]="false">
     <h3>
       Incidence Details</h3>
@@ -42,9 +42,9 @@
 
         <ng-container matColumnDef="7dbbd756-be69-0c77-9002-7a6398b30c2e">
           <th mat-header-cell *matHeaderCellDef>Action</th>
-          <td mat-cell *matCellDef="let table; let i = index;"><button mat-fab style="size:5px" color="primary" (click)="deleterecord(table._id)">
+          <td mat-cell *matCellDef="let table; let i = index;" fxLayoutGap="8px"><button mat-mini-fab (click)="deleterecord(table._id)">
               <mat-icon>delete</mat-icon>
-            </button><button mat-fab color="primary" (click)="openEditDialog(table)">
+            </button><button mat-mini-fab (click)="openEditDialog(table)">
               <mat-icon>edit</mat-icon>
             </button></td>
         </ng-container>

@@ -11,13 +11,15 @@
             },
             {
                 "_key": "style",
-                "_value": "background-color:yellow",
+                "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
                 "_key": "class",
-                "_value": "",
+                "_value": [
+                    "header"
+                ],
                 "_type": "dav",
                 "_attrDef": "p"
             },
@@ -29,25 +31,25 @@
             },
             {
                 "_key": "fxLayoutGap",
-                "_value": "1080px",
+                "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
                 "_key": "wrap",
-                "_value": "wrap",
+                "_value": "",
                 "_type": "a",
                 "_attrDef": "p"
             },
             {
                 "_key": "layoutAlign",
-                "_value": "none",
+                "_value": "space-between",
                 "_type": "a",
                 "_attrDef": "p"
             },
             {
                 "_key": "pLayoutAlign",
-                "_value": "stretch",
+                "_value": "center",
                 "_type": "a",
                 "_attrDef": "p"
             },
@@ -1301,21 +1303,27 @@
                             "_value": "",
                             "_type": "dav",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "fxLayoutGap",
+                            "_value": "8px",
+                            "_type": "kv",
+                            "_attrDef": "c"
                         }
                     ],
-                    "0fcaa0bd-798b-07da-846a-91eeb22100bf": {
-                        "paletteKey": "NG-FabButton",
+                    "b64240c7-a7e3-206a-858e-94668593d898": {
+                        "paletteKey": "NG-MiniFabButton",
                         "parentEditorKey": "3f19b778-d85e-c277-6d4d-dbbcf32b7f9c",
                         "designerReference": [
                             {
                                 "_key": "style",
-                                "_value": "size:5px",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "class",
-                                "_value": [],
+                                "_value": "",
                                 "_type": "dav",
                                 "_attrDef": "p"
                             },
@@ -1328,7 +1336,7 @@
                             },
                             {
                                 "_key": "color",
-                                "_value": "primary",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -1364,8 +1372,8 @@
                             }
                         ]
                     },
-                    "4bd0c7f2-8b64-0c09-f291-631aaa031b7f": {
-                        "paletteKey": "NG-FabButton",
+                    "b118e84e-805f-cc6b-981d-c633ae3def9c": {
+                        "paletteKey": "NG-MiniFabButton",
                         "parentEditorKey": "3f19b778-d85e-c277-6d4d-dbbcf32b7f9c",
                         "designerReference": [
                             {
@@ -1389,7 +1397,7 @@
                             },
                             {
                                 "_key": "color",
-                                "_value": "primary",
+                                "_value": "",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
