@@ -55,13 +55,7 @@ export class loginpageComponent extends NBaseComponent implements OnInit {
     }
 
      Loginneutrinos() {
-        this.neutrinosOAuthClientService.login().then(loggedin => {
-            // User logged in
-            console.log('login', loggedin)
-            this.router.navigate(['/home']);
-        }).catch(loginError => {
-            // Login error
-        });
+         this.neutrinosOAuthClientService.login('/home')
     }
 
     logout() {

@@ -94,7 +94,7 @@
         "summary": "Get All Data",
         "description": "",
         "method": "get",
-        "sequenceId": "",
+        "sequenceId": "IDSAuthroizedAPIs",
         "consumes": "",
         "produces": "",
         "filetype": "path",
@@ -115,7 +115,6 @@
                 }
             }
         },
-        "uploadFileOptions": {},
         "editableListData": {
             "responses": [
                 {
@@ -291,7 +290,7 @@
         "summary": "Add Incidence Data",
         "description": "",
         "method": "post",
-        "sequenceId": "",
+        "sequenceId": "IDSAuthroizedAPIs",
         "consumes": "",
         "produces": "",
         "filetype": "path",
@@ -339,7 +338,6 @@
                 }
             }
         },
-        "uploadFileOptions": {},
         "editableListData": {
             "responses": [
                 {
@@ -548,7 +546,7 @@
         "summary": "Delete Incidence Data",
         "description": "",
         "method": "post",
-        "sequenceId": "",
+        "sequenceId": "IDSAuthroizedAPIs",
         "consumes": "",
         "produces": "",
         "filetype": "path",
@@ -760,7 +758,7 @@
         "summary": "Update All Data",
         "description": "",
         "method": "put",
-        "sequenceId": "",
+        "sequenceId": "IDSAuthroizedAPIs",
         "consumes": "",
         "produces": "",
         "filetype": "path",
