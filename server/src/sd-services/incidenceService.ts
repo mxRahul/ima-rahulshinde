@@ -123,7 +123,7 @@ export class incidenceService {
       `${this.serviceBasePath}/getallicidence`,
       cookieParser(),
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'pre',
         this.generatedMiddlewares
       ),
@@ -144,7 +144,7 @@ export class incidenceService {
         }
       },
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'post',
         this.generatedMiddlewares
       )
@@ -225,7 +225,7 @@ export class incidenceService {
       `${this.serviceBasePath}/addincidence`,
       cookieParser(),
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'pre',
         this.generatedMiddlewares
       ),
@@ -246,7 +246,7 @@ export class incidenceService {
         }
       },
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'post',
         this.generatedMiddlewares
       )
@@ -291,7 +291,7 @@ export class incidenceService {
       `${this.serviceBasePath}/deleteicidence`,
       cookieParser(),
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'pre',
         this.generatedMiddlewares
       ),
@@ -312,7 +312,7 @@ export class incidenceService {
         }
       },
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'post',
         this.generatedMiddlewares
       )
@@ -405,7 +405,7 @@ export class incidenceService {
       `${this.serviceBasePath}/updateicidence`,
       cookieParser(),
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'pre',
         this.generatedMiddlewares
       ),
@@ -426,7 +426,7 @@ export class incidenceService {
         }
       },
       this.sdService.getMiddlesWaresBySequenceId(
-        null,
+        'IDSAuthroizedAPIs',
         'post',
         this.generatedMiddlewares
       )

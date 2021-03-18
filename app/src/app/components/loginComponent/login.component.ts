@@ -19,8 +19,10 @@ import { HeroService } from '../../services/hero/hero.service';
 
 export class loginComponent extends NBaseComponent implements OnInit {
 
-    constructor(public neutrinosOAuthClientService: NeutrinosOAuthClientService) {
-        super();
+   constructor(
+   public neutrinosOAuthClientService: NeutrinosOAuthClientService) 
+    {
+     super();
     }
 
     ngOnInit() {
@@ -28,12 +30,13 @@ export class loginComponent extends NBaseComponent implements OnInit {
     }
 
     Login() {
-        this.neutrinosOAuthClientService.login().then(loggedin => {
-            // User logged in
-            console.log('login')
-        }).catch(loginError => {
-            // Login error
-        });
+        this.neutrinosOAuthClientService.login('home')
+        // this.neutrinosOAuthClientService.login().then(loggedin => {
+        //     // User logged in
+        //    this.neutrinosOAuthClientService.login('home')
+        // }).catch(loginError => {
+        //     // Login error
+        // });
     }
 
     logout() {
