@@ -924,12 +924,6 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
-                                },
-                                {
-                                    "_key": "formControlName",
-                                    "_value": "description",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
                                 }
                             ]
                         }
@@ -1165,12 +1159,6 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
-                                },
-                                {
-                                    "_key": "formControlName",
-                                    "_value": "priority",
-                                    "_type": "kv",
-                                    "_attrDef": "c"
                                 }
                             ]
                         }

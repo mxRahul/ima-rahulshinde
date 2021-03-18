@@ -96,5 +96,5 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'home', component: homeComponent},{path: 'addIncidence', component: addincidencepageComponent},{path: 'listData', component: listincidencepageComponent},{path: 'loginpage', component: loginpageComponent},{path: 'samplepage', component: samplepageComponent},{path: 'login', component: loginComponent},{path: 'updatepage', component: updatepageComponent},{path: '', redirectTo: 'loginpage', pathMatch: 'full'},{path: '**', redirectTo: 'loginpage'}]
+export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'addIncidence', component: addincidencepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'listData', component: listincidencepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'loginpage', component: loginpageComponent},{path: 'samplepage', component: samplepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'login', component: loginComponent},{path: 'updatepage', component: updatepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: '', redirectTo: 'loginpage', pathMatch: 'full'},{path: '**', redirectTo: 'loginpage'}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END
