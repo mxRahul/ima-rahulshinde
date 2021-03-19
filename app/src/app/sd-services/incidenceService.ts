@@ -140,6 +140,60 @@ export class incidenceService {
     }
   }
 
+  async adduser(body: any = undefined, ...others) {
+    try {
+      var bh = {
+        input: {
+          body: body,
+        },
+        local: {
+          result: undefined,
+        },
+      };
+      bh = this.sdService.__constructDefault(bh);
+      bh = await this.sd_iM2pjTjyCGPbP7X9(bh);
+      //appendnew_next_adduser
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {
+            result: bh.local.result,
+          },
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_49fExgZUoBmC6nNz');
+    }
+  }
+
+  async getuser(username: any = undefined, ...others) {
+    try {
+      var bh = {
+        input: {
+          username: username,
+        },
+        local: {
+          result: undefined,
+        },
+      };
+      bh = this.sdService.__constructDefault(bh);
+      bh = await this.sd_gjpXstTOAsI7xDcy(bh);
+      //appendnew_next_getuser
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {
+            result: bh.local.result,
+          },
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_zJuiBOyF1bgXEdbK');
+    }
+  }
+
   //appendnew_flow_incidenceService_start
 
   async getalldata(bh) {
@@ -235,6 +289,65 @@ export class incidenceService {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_UcgsCiUPfhDMAJla');
+    }
+  }
+
+  async sd_iM2pjTjyCGPbP7X9(bh) {
+    try {
+      let basePath = bh.system.environment.properties.ssdURL.endsWith('/')
+        ? bh.system.environment.properties.ssdURL
+        : bh.system.environment.properties.ssdURL + '/';
+      let url = `adduser/`;
+      let finalUrl = basePath + url;
+      let requestOptions = {
+        url: finalUrl,
+        method: 'post',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: {},
+        body: bh.input.body,
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_iM2pjTjyCGPbP7X9
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_iM2pjTjyCGPbP7X9');
+    }
+  }
+
+  async sd_gjpXstTOAsI7xDcy(bh) {
+    try {
+      bh.local.query = { username: bh.input.username };
+      bh = await this.sd_1HT4RHvPnFkh3Y1k(bh);
+      //appendnew_next_sd_gjpXstTOAsI7xDcy
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_gjpXstTOAsI7xDcy');
+    }
+  }
+
+  async sd_1HT4RHvPnFkh3Y1k(bh) {
+    try {
+      let basePath = bh.system.environment.properties.ssdURL.endsWith('/')
+        ? bh.system.environment.properties.ssdURL
+        : bh.system.environment.properties.ssdURL + '/';
+      let url = `getuser/`;
+      let finalUrl = basePath + url;
+      let requestOptions = {
+        url: finalUrl,
+        method: 'get',
+        responseType: 'json',
+        reportProgress: undefined,
+        headers: {},
+        params: bh.local.query,
+        body: undefined,
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+      //appendnew_next_sd_1HT4RHvPnFkh3Y1k
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_1HT4RHvPnFkh3Y1k');
     }
   }
 

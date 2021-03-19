@@ -9,15 +9,15 @@
       <form [formGroup]="profileForm">
         <div fxLayout="column wrap" fxLayoutGap="16px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput [required]="false" formControlName="username" readonly="true" [disabled]="true">
+            <input matInput placeholder="User name" [required]="false" formControlName="username" readonly="true" [disabled]="true">
             <mat-label>Username</mat-label>
           </mat-form-field>
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput [required]="false" formControlName="displayName" readonly="true" [disabled]="true">
+            <input matInput placeholder="Full Name" [required]="false" formControlName="displayName" readonly="true" [disabled]="true">
             <mat-label>Full Name</mat-label>
           </mat-form-field>
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput [required]="false" formControlName="subscriptionType" readonly="true" [disabled]="true">
+            <input matInput placeholder="Subscription" [required]="false" formControlName="subscriptionType" readonly="true" [disabled]="true">
             <mat-label>Subscription Type</mat-label>
           </mat-form-field>
           <mat-form-field [appearance]="&apos;outline&apos;">
@@ -42,7 +42,7 @@
               </ng-template>
             </mat-select>
 
-          </mat-form-field>
+          </mat-form-field><button mat-raised-button color="primary" (click)="submit()">Submit</button>
         </div>
       </form>
     </mat-card-content>

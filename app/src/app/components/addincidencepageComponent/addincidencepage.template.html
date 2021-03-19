@@ -24,9 +24,9 @@
             <mat-error align="start" *ngIf="firstFormGroup.controls.priority.errors?.required">Enter valid priority</mat-error>
           </mat-form-field>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false" formControlName="dateValue">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
           <mat-form-field style="width:210px" [appearance]="&apos;outline&apos;">
-            <input matInput placeholder="Incidence date" [matDatepicker]="picker" (dateChange)="onDate($event)" [required]="true" [disabled]="false">
+            <input matInput placeholder="Incidence date" [matDatepicker]="picker" (dateChange)="onDate($event)" [required]="true" [disabled]="false" formControlName="dateValue">
             <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
             <mat-datepicker #picker [disabled]="false"></mat-datepicker>
 

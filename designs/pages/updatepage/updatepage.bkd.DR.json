@@ -550,7 +550,7 @@
                                 },
                                 {
                                     "_key": "value",
-                                    "_value": "{{subject}}",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -689,6 +689,12 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
+                                },
+                                {
+                                    "_key": "formControlName",
+                                    "_value": "subject",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ]
                         }
@@ -785,7 +791,7 @@
                                 },
                                 {
                                     "_key": "value",
-                                    "_value": "{{description}}",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -924,6 +930,12 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
+                                },
+                                {
+                                    "_key": "formControlName",
+                                    "_value": "description",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ]
                         }
@@ -1020,7 +1032,7 @@
                                 },
                                 {
                                     "_key": "value",
-                                    "_value": "{{priority}}",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1159,6 +1171,12 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
+                                },
+                                {
+                                    "_key": "formControlName",
+                                    "_value": "priority",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ]
                         }
@@ -1229,14 +1247,14 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "32b1ef7e-d7f0-3349-662c-f977cac30adf": {
+                        "ac54ff1a-f95b-da11-322d-893090aa4c92": {
                             "paletteKey": "NG-DatePicker",
                             "parentEditorKey": "ff40f61e-6496-9e70-6169-b867cc3802d8",
                             "isAdvancedComponent": true,
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "width:210px",
+                                    "_value": "style:width:210px",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1248,7 +1266,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "Date Picker",
+                                    "_value": "Date of Incidence",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -1279,7 +1297,7 @@
                                 },
                                 {
                                     "_key": "value",
-                                    "_value": "{{date}}",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1523,7 +1541,7 @@
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "center",
+                                "_value": "stretch",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },

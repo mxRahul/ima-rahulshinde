@@ -1,9 +1,9 @@
 export default {
   logger: {
-    level: 'debug',
-    transport: ['file', 'console'],
-    exceptionFile: 'logs/exception.log',
+    level: 'error',
     logFile: 'logs/console.log',
+    exceptionFile: 'logs/exception.log',
+    transport: ['file', 'console'],
   },
   middlewares: {
     pre: [

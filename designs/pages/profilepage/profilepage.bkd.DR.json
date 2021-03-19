@@ -353,7 +353,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "",
+                                    "_value": "User name",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -527,7 +527,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "",
+                                    "_value": "Full Name",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -701,7 +701,7 @@
                                 },
                                 {
                                     "_key": "placeholder",
-                                    "_value": "",
+                                    "_value": "Subscription",
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
@@ -1470,6 +1470,67 @@
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": true
+                                }
+                            ]
+                        },
+                        "eaaa16e3-19b1-0af2-4e53-92bddf43c4a6": {
+                            "paletteKey": "NG-RaisedButton",
+                            "parentEditorKey": "a2296cbb-8468-ee1d-f737-dcc0eab99604",
+                            "designerReference": [
+                                {
+                                    "_key": "style",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "class",
+                                    "_value": "",
+                                    "_type": "dav",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "buttonname",
+                                    "_value": "Submit",
+                                    "_type": "a",
+                                    "_attrDef": "p",
+                                    "_useAsLabel": true
+                                },
+                                {
+                                    "_key": "color",
+                                    "_value": "primary",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "submit()",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[disabled]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[disableRipple]",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "type",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "routerLink",
+                                    "_value": "",
+                                    "_type": "kv",
+                                    "_attrDef": "p"
                                 }
                             ]
                         }
