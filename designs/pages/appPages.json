@@ -34,9 +34,21 @@
         "componentName": "updatepageComponent",
         "createDate": "2021-03-18T06:46:03.795Z"
     },
+<<<<<<< HEAD
     "52ae50be-f783-1979-f616-826ca781101c": {
         "appPageName": "graphincident",
         "componentName": "graphincidentComponent",
         "createDate": "2021-03-19T00:53:13.884Z"
+=======
+    "521e0879-6408-743d-868d-805674f5ee9a": {
+        "appPageName": "profilepage",
+        "componentName": "profilepageComponent",
+        "createDate": "2021-03-19T02:22:32.707Z"
+    },
+    "99e07dd3-0e93-7619-4021-f77c44e747d3": {
+        "appPageName": "header",
+        "componentName": "headerComponent",
+        "createDate": "2021-03-19T02:24:16.074Z"
+>>>>>>> 8ad4deb30eb224448ebe5fa6ab254f0023fa25d5
     }
 }

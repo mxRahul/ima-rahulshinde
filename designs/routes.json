@@ -34,6 +34,11 @@
             "component": "graphincidentComponent"
         },
         {
+            "canActivate": "NeutrinosAuthGuardService",
+            "path": "profilepage",
+            "component": "profilepageComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "loginpage",
             "pathMatch": "full",

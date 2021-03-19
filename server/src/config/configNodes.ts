@@ -8,7 +8,7 @@ export default {
             "dbOption": {
                 "name": "ima",
                 "type": "mongodb",
-                "url": "mongodb+srv://rahulshinde5140:lKryLoplrKdYraut@cluster0.pcpmp.mongodb.net/imasystem?retryWrites=true&w=majority",
+                "url": process.env.dbserverstring,
                 "options": ""
             },
             "disabledb": false,
@@ -54,7 +54,7 @@ export default {
             "oracle_synchronize": false,
             "mongodb_name": "ima",
             "mongodb_type": "mongodb",
-            "mongodb_url": "mongodb+srv://rahulshinde5140:lKryLoplrKdYraut@cluster0.pcpmp.mongodb.net/imasystem?retryWrites=true&w=majority",
+            "mongodb_url": process.env.dbserverstring,
             "mongodb_options": "",
             "mysql_name": "ima",
             "mysql_type": "mongodb",
@@ -243,8 +243,8 @@ export default {
                     "value": false
                 },
                 "mongodb_url": {
-                    "type": "str",
-                    "value": "mongodb+srv://rahulshinde5140:lKryLoplrKdYraut@cluster0.pcpmp.mongodb.net/imasystem?retryWrites=true&w=majority"
+                    "type": "server_env",
+                    "value": "dbserverstring"
                 },
                 "mongodb_options": {
                     "type": "str",
@@ -441,7 +441,9 @@ export default {
                     "sd_zihED6Hyelpls9kv",
                     "sd_Vo4QBNp3SdByMR4W",
                     "sd_yYJz0wcV8NCQnSjG",
-                    "sd_Hy3BKMpjbk34b2cs"
+                    "sd_Hy3BKMpjbk34b2cs",
+                    "sd_UrcR9TySPZWJ5buq",
+                    "sd_ZgJGi0wBzfqMHmiX"
                 ]
             }
         }

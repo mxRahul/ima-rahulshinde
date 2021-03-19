@@ -1,12 +1,12 @@
 {
     "logger": {
-        "level": "debug",
+        "level": "error",
+        "logFile": "logs/console.log",
+        "exceptionFile": "logs/exception.log",
         "transport": [
             "file",
             "console"
-        ],
-        "exceptionFile": "logs/exception.log",
-        "logFile": "logs/console.log"
+        ]
     },
     "middlewares": {
         "pre": [

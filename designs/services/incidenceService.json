@@ -165,13 +165,14 @@
         "functionName": "adddata",
         "category": "HTTP",
         "__n_excludedFromValidation__": {},
-        "x": 185,
+        "x": 225,
         "y": 160,
         "wires": [
             []
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "incidenceService"
     },
     {
         "id": "sd_z36zjEVt0PIwYHzv",
@@ -253,7 +254,7 @@
         "functionName": "sd_mNKZBaI06EMon0wt",
         "category": "HTTP",
         "__n_excludedFromValidation__": {},
-        "x": 220,
+        "x": 225,
         "y": 280,
         "wires": [
             []
@@ -352,6 +353,196 @@
         "y": 400,
         "wires": [
             []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_49fExgZUoBmC6nNz",
+        "type": "Start",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "adduser",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "body",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "adduser",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 520,
+        "wires": [
+            [
+                "sd_iM2pjTjyCGPbP7X9"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_iM2pjTjyCGPbP7X9",
+        "type": "CallSSDApi",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlValue": "/adduser",
+        "url": "/adduser",
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBody": "bh.input.body",
+        "reqBodyObj": {
+            "mapVarType": "bh.input",
+            "mapVarValue": "body"
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "sd_iM2pjTjyCGPbP7X9",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 225,
+        "y": 520,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_zJuiBOyF1bgXEdbK",
+        "type": "Start",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "getuser",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "username",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getuser",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 45,
+        "y": 640,
+        "wires": [
+            [
+                "sd_gjpXstTOAsI7xDcy"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService"
+    },
+    {
+        "id": "sd_1HT4RHvPnFkh3Y1k",
+        "type": "CallSSDApi",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlValue": "/getuser",
+        "url": "/getuser",
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "paramMapping": "bh.local.query",
+        "paramMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "query"
+        },
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "sd_1HT4RHvPnFkh3Y1k",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 245,
+        "y": 640,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_gjpXstTOAsI7xDcy",
+        "type": "Script",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.query = { username: bh.input.username }",
+        "functionName": "sd_gjpXstTOAsI7xDcy",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 140,
+        "y": 640,
+        "wires": [
+            [
+                "sd_1HT4RHvPnFkh3Y1k"
+            ]
         ],
         "generateNext": false,
         "generated": true

@@ -431,6 +431,210 @@ export class incidenceService {
         this.generatedMiddlewares
       )
     );
+
+    if (!this.swaggerDocument['paths']['/adduser']) {
+      this.swaggerDocument['paths']['/adduser'] = {
+        post: {
+          summary: 'Add user Data',
+          description: '',
+          consumes: ['application/json'],
+          produces: [],
+          parameters: [
+            {
+              in: 'body',
+              name: 'username',
+              description: 'user name ',
+              required: true,
+            },
+            {
+              in: 'body',
+              name: 'fullname',
+              description: 'full name of user',
+              required: true,
+            },
+            {
+              in: 'body',
+              name: 'subscriptiontype',
+              description: 'subscription type',
+              required: true,
+            },
+            {
+              in: 'body',
+              name: 'address',
+              description: 'address of user',
+              required: true,
+            },
+            {
+              in: 'body',
+              name: 'city',
+              description: 'city of user',
+              required: true,
+            },
+            {
+              in: 'body',
+              name: 'title',
+              description: 'role of user',
+              required: true,
+            },
+            {
+              in: 'body',
+              name: 'region',
+              description: 'region of user',
+              required: true,
+            },
+          ],
+          responses: { '200': { description: 'ok' } },
+        },
+      };
+    } else {
+      this.swaggerDocument['paths']['/adduser']['post'] = {
+        summary: 'Add user Data',
+        description: '',
+        consumes: ['application/json'],
+        produces: [],
+        parameters: [
+          {
+            in: 'body',
+            name: 'username',
+            description: 'user name ',
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'fullname',
+            description: 'full name of user',
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'subscriptiontype',
+            description: 'subscription type',
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'address',
+            description: 'address of user',
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'city',
+            description: 'city of user',
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'title',
+            description: 'role of user',
+            required: true,
+          },
+          {
+            in: 'body',
+            name: 'region',
+            description: 'region of user',
+            required: true,
+          },
+        ],
+        responses: { '200': { description: 'ok' } },
+      };
+    }
+    this.app['post'](
+      `${this.serviceBasePath}/adduser`,
+      cookieParser(),
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'pre',
+        this.generatedMiddlewares
+      ),
+
+      async (req, res, next) => {
+        let bh = {};
+        try {
+          bh = this.sdService.__constructDefault(
+            { local: {}, input: {} },
+            req,
+            res,
+            next
+          );
+          bh = await this.adduser(bh);
+          //appendnew_next_sd_fbaOvjtq45B2QNRj
+        } catch (e) {
+          return await this.errorHandler(bh, e, 'sd_fbaOvjtq45B2QNRj');
+        }
+      },
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'post',
+        this.generatedMiddlewares
+      )
+    );
+
+    if (!this.swaggerDocument['paths']['/getuser']) {
+      this.swaggerDocument['paths']['/getuser'] = {
+        get: {
+          summary: 'Get All Data',
+          description: '',
+          consumes: [],
+          produces: [],
+          parameters: [
+            {
+              in: 'query',
+              name: 'username',
+              description: 'username of user',
+              required: true,
+            },
+          ],
+          responses: { '200': { description: 'ok' } },
+        },
+      };
+    } else {
+      this.swaggerDocument['paths']['/getuser']['get'] = {
+        summary: 'Get All Data',
+        description: '',
+        consumes: [],
+        produces: [],
+        parameters: [
+          {
+            in: 'query',
+            name: 'username',
+            description: 'username of user',
+            required: true,
+          },
+        ],
+        responses: { '200': { description: 'ok' } },
+      };
+    }
+    this.app['get'](
+      `${this.serviceBasePath}/getuser`,
+      cookieParser(),
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'pre',
+        this.generatedMiddlewares
+      ),
+
+      async (req, res, next) => {
+        let bh = {};
+        try {
+          bh = this.sdService.__constructDefault(
+            { local: {}, input: {} },
+            req,
+            res,
+            next
+          );
+          bh = await this.sd_djKzFBcApHWF8A8O(bh);
+          //appendnew_next_sd_3q3aPanY6oiHoaWw
+        } catch (e) {
+          return await this.errorHandler(bh, e, 'sd_3q3aPanY6oiHoaWw');
+        }
+      },
+      this.sdService.getMiddlesWaresBySequenceId(
+        null,
+        'post',
+        this.generatedMiddlewares
+      )
+    );
     //appendnew_flow_incidenceService_HttpIn
   }
   //   service flows_incidenceService
@@ -557,6 +761,69 @@ export class incidenceService {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_UzybHt4Eqw6JvpJ0');
+    }
+  }
+
+  async adduser(bh) {
+    try {
+      bh.local.result = await MongoPersistance.getInstance().insertOne(
+        'sd_e1rsqEcXpIcH0233',
+        'user',
+        bh.input.body,
+        {}
+      );
+      await this.sd_NWg95i5RvXlUq0CI(bh);
+      //appendnew_next_adduser
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_UrcR9TySPZWJ5buq');
+    }
+  }
+
+  async sd_NWg95i5RvXlUq0CI(bh) {
+    try {
+      bh.web.res.status(200).send(bh.local.result);
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_NWg95i5RvXlUq0CI');
+    }
+  }
+
+  async sd_djKzFBcApHWF8A8O(bh) {
+    try {
+      bh.local.filter = { username: bh.input.query.username };
+      bh = await this.getuser(bh);
+      //appendnew_next_sd_djKzFBcApHWF8A8O
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_djKzFBcApHWF8A8O');
+    }
+  }
+
+  async getuser(bh) {
+    try {
+      bh.local.result = await MongoPersistance.getInstance().find(
+        'sd_e1rsqEcXpIcH0233',
+        'user',
+        bh.local.filter,
+        {}
+      );
+      await this.sd_F70vahHZHwIJwlhs(bh);
+      //appendnew_next_getuser
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_ZgJGi0wBzfqMHmiX');
+    }
+  }
+
+  async sd_F70vahHZHwIJwlhs(bh) {
+    try {
+      bh.web.res.status(200).send(bh.local.result);
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_F70vahHZHwIJwlhs');
     }
   }
 

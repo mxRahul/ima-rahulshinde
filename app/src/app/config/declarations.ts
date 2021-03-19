@@ -17,6 +17,10 @@ window['neutrinos'] = {
 //CORE_REFERENCE_IMPORTS
 //CORE_REFERENCE_IMPORT-graphincidentComponent
 import { graphincidentComponent } from '../components/graphincidentComponent/graphincident.component';
+//CORE_REFERENCE_IMPORT-headerComponent
+import { headerComponent } from '../components/headerComponent/header.component';
+//CORE_REFERENCE_IMPORT-profilepageComponent
+import { profilepageComponent } from '../components/profilepageComponent/profilepage.component';
 //CORE_REFERENCE_IMPORT-updatepageComponent
 import { updatepageComponent } from '../components/updatepageComponent/updatepage.component';
 //CORE_REFERENCE_IMPORT-loginComponent
@@ -57,9 +61,12 @@ export const appDeclarations = [
   LayoutComponent,
   PageNotFoundComponent,
   ArtImgSrcDirective,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-graphincidentComponent
 graphincidentComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-headerComponent
+headerComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-profilepageComponent
+profilepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-updatepageComponent
 updatepageComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
@@ -100,5 +107,5 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'home', component: homeComponent},{path: 'addIncidence', component: addincidencepageComponent},{path: 'listData', component: listincidencepageComponent},{path: 'loginpage', component: loginpageComponent},{path: 'samplepage', component: samplepageComponent},{path: 'login', component: loginComponent},{path: 'updatepage', component: updatepageComponent},{path: 'chart', component: graphincidentComponent},{path: '', redirectTo: 'loginpage', pathMatch: 'full'},{path: '**', redirectTo: 'loginpage'}]
+export const appRoutes = [{path: 'home', component: homeComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'addIncidence', component: addincidencepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'listData', component: listincidencepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'loginpage', component: loginpageComponent},{path: 'samplepage', component: samplepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'login', component: loginComponent},{path: 'updatepage', component: updatepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'chart', component: graphincidentComponent, canActivate: [NeutrinosAuthGuardService]},{path: 'profilepage', component: profilepageComponent, canActivate: [NeutrinosAuthGuardService]},{path: '', redirectTo: 'loginpage', pathMatch: 'full'},{path: '**', redirectTo: 'loginpage'}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END
