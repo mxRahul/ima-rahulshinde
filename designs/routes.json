@@ -3,28 +3,23 @@
         {
             "path": "home",
             "component": "homeComponent",
-            "canActivate": "NeutrinosAuthGuardService",
-            "canDeactivate": ""
+            "canActivate": ""
         },
         {
             "path": "addIncidence",
-            "component": "addincidencepageComponent",
-            "canActivate": "NeutrinosAuthGuardService"
+            "component": "addincidencepageComponent"
         },
         {
             "path": "listData",
-            "component": "listincidencepageComponent",
-            "canActivate": "NeutrinosAuthGuardService"
+            "component": "listincidencepageComponent"
         },
         {
             "path": "loginpage",
-            "component": "loginpageComponent",
-            "redirectTo": ""
+            "component": "loginpageComponent"
         },
         {
             "path": "samplepage",
-            "component": "samplepageComponent",
-            "canActivate": "NeutrinosAuthGuardService"
+            "component": "samplepageComponent"
         },
         {
             "path": "login",
@@ -32,8 +27,11 @@
         },
         {
             "path": "updatepage",
-            "component": "updatepageComponent",
-            "canActivate": "NeutrinosAuthGuardService"
+            "component": "updatepageComponent"
+        },
+        {
+            "path": "chart",
+            "component": "graphincidentComponent"
         },
         {
             "path": "''",
