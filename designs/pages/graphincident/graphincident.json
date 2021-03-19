@@ -1,0 +1,14 @@
+{
+    "appPageId": "52ae50be-f783-1979-f616-826ca781101c",
+    "appPageName": "graphincident",
+    "componentName": "graphincidentComponent",
+    "selectorName": "bh-graphincident",
+    "htmlFileName": "graphincident.template.html",
+    "tsFileName": "graphincident.component.ts",
+    "createDate": "2021-03-19T00:53:13.884Z",
+    "bkd": {
+        "designerHtml": "",
+        "designerReference": {},
+        "ts": ""
+    }
+}

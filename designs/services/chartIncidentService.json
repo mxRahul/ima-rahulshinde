@@ -1,0 +1,87 @@
+[
+    {
+        "id": "sd_uBzUDCKhSmAww6ed",
+        "type": "tab",
+        "createdDate": "2021-03-19T08:52:46.891Z",
+        "relativeParentPath": "",
+        "label": "chartIncidentService",
+        "disabled": false,
+        "info": "",
+        "generateNext": true,
+        "serviceName": "chartIncidentService"
+    },
+    {
+        "id": "sd_MLNKWT1Ntrt3n7i6",
+        "type": "Start",
+        "z": "sd_uBzUDCKhSmAww6ed",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "getdatachart",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [
+            {
+                "key": "result",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "getdatachart",
+        "category": "General",
+        "__n_excludedFromValidation__": {},
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "sd_rSE329paZ8Ap4Czw"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "chartIncidentService"
+    },
+    {
+        "id": "sd_rSE329paZ8Ap4Czw",
+        "type": "CallSSDApi",
+        "z": "sd_uBzUDCKhSmAww6ed",
+        "viewType": "client",
+        "nodeType": "flow",
+        "name": "getalldata",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlValue": "/getallicidence",
+        "url": "/getallicidence",
+        "ret": "json",
+        "retMappingObj": {},
+        "reqBodyObj": {
+            "mapVarType": "bh",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "inputVariables": [],
+        "inputParams": [],
+        "functionName": "getalldata",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 280,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "generateNext": false,
+        "generated": true
+    }
+]
