@@ -42,17 +42,6 @@ export class homeComponent extends NBaseComponent implements OnInit {
       this.callClientService()
     }
 
-    openDialog() {
-        const dialogRef = this.dialog.open(addincidencepageComponent, {
-           width: '320px',
-           data: {}
-        });
-        dialogRef.afterClosed().subscribe(result => {
-        this.ngOnInit()
-        console.log('close', JSON.stringify(result));
-    });
-    }
-
 
    async deleterecord(e) {
        if (confirm("Are you sure?")) {
@@ -77,9 +66,5 @@ export class homeComponent extends NBaseComponent implements OnInit {
         this.ngOnInit()
         console.log('close', JSON.stringify(result));
     });
-    }
-
-    logout() {
-       this.neutrinosOAuthClientService.logout('loginpage')
     }
 }
