@@ -1,5 +1,11 @@
 {
     "classes": [
-        "header"
+        "header",
+        "mat-flat-button",
+        "mat-primary",
+        "mat-raised-button",
+        "mat-fab",
+        "mat-mini-fab",
+        "mat-accent"
     ]
 }

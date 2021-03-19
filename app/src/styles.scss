@@ -3,7 +3,28 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "nDefaults.scss";
 
+$header_bgcolor: #fbd54a;
+$primary_color: blue;
+$accent_color: lightgreen;
+
+/* Header */
 .header {
-    background-color:#fbd54a;
+    background-color:$header_bgcolor;
     padding: 16px;
+}
+
+/* Primary Buttons */
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    background-color: $primary_color;
+}
+
+/* Accent Buttons */
+.mat-flat-button.mat-accent,
+.mat-raised-button.mat-accent,
+.mat-fab.mat-accent,
+.mat-mini-fab.mat-accent {
+    background-color: $accent_color;
 }
