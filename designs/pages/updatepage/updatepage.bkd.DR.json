@@ -1254,7 +1254,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "style:width:210px",
+                                    "_value": "width:210px",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },

@@ -18,11 +18,14 @@
         "nodeType": "flow",
         "name": "getalldata",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlValue": "/getallicidence",
         "url": "/getallicidence",
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
+        "reqBody": "",
         "reqBodyObj": {
             "mapVarType": "bh",
             "mapVarValue": ""
@@ -34,9 +37,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "inputVariables": [],
         "inputParams": [],
@@ -298,7 +303,7 @@
         "y": 400,
         "wires": [
             [
-                "sd_UcgsCiUPfhDMAJla"
+                "sd_alKcN8r3wJpF627a"
             ]
         ],
         "generateNext": true,
@@ -312,17 +317,15 @@
         "nodeType": "flow",
         "name": "",
         "method": "put",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlValue": "/updateicidence",
         "url": "/updateicidence",
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
-        "reqBody": "bh.local.body.body",
+        "reqBody": "bh.local.updateQuery",
         "reqBodyObj": {
             "mapVarType": "bh.local",
-            "mapVarValue": "body.body"
+            "mapVarValue": "updateQuery"
         },
         "resultMapping": "bh.local.result",
         "resultMappingObj": {
@@ -331,19 +334,12 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
-        "params": {
-            "_id": "bh.local.body.id"
+        "paramMapping": "bh.local.query",
+        "paramMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "query"
         },
-        "paramsObj": [
-            {
-                "key": "_id",
-                "defaultValue": "bh.local.body.id"
-            }
-        ],
-        "paramMapping": "",
-        "paramMappingObj": {},
         "inputVariables": [],
         "inputParams": [],
         "functionName": "sd_UcgsCiUPfhDMAJla",
@@ -407,10 +403,12 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlValue": "/adduser",
         "url": "/adduser",
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "reqBody": "bh.input.body",
         "reqBodyObj": {
@@ -424,9 +422,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "inputVariables": [],
         "inputParams": [],
@@ -491,11 +491,14 @@
         "nodeType": "flow",
         "name": "",
         "method": "get",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlValue": "/getuser",
         "url": "/getuser",
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
+        "reqBody": "",
         "reqBodyObj": {
             "mapVarType": "bh",
             "mapVarValue": ""
@@ -507,7 +510,10 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
+        "params": [],
+        "paramsObj": {},
         "paramMapping": "bh.local.query",
         "paramMappingObj": {
             "mapVarType": "bh.local",
@@ -542,6 +548,27 @@
         "wires": [
             [
                 "sd_1HT4RHvPnFkh3Y1k"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_alKcN8r3wJpF627a",
+        "type": "Script",
+        "z": "sd_xcFnwLccCDo3wjhi",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.query = { _id: bh.input.body.id }\nbh.local.updateQuery = bh.input.body.body",
+        "functionName": "sd_alKcN8r3wJpF627a",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 125,
+        "y": 400,
+        "wires": [
+            [
+                "sd_UcgsCiUPfhDMAJla"
             ]
         ],
         "generateNext": false,

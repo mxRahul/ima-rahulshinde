@@ -124,7 +124,7 @@ export class incidenceService {
         },
       };
       bh = this.sdService.__constructDefault(bh);
-      bh = await this.sd_UcgsCiUPfhDMAJla(bh);
+      bh = await this.sd_alKcN8r3wJpF627a(bh);
       //appendnew_next_updatedata
       return (
         // formatting output variables
@@ -268,6 +268,18 @@ export class incidenceService {
     }
   }
 
+  async sd_alKcN8r3wJpF627a(bh) {
+    try {
+      bh.local.query = { _id: bh.input.body.id };
+      bh.local.updateQuery = bh.input.body.body;
+      bh = await this.sd_UcgsCiUPfhDMAJla(bh);
+      //appendnew_next_sd_alKcN8r3wJpF627a
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_alKcN8r3wJpF627a');
+    }
+  }
+
   async sd_UcgsCiUPfhDMAJla(bh) {
     try {
       let basePath = bh.system.environment.properties.ssdURL.endsWith('/')
@@ -281,8 +293,8 @@ export class incidenceService {
         responseType: 'json',
         reportProgress: undefined,
         headers: {},
-        params: { _id: 'bh.local.body.id' },
-        body: bh.local.body.body,
+        params: bh.local.query,
+        body: bh.local.updateQuery,
       };
       bh.local.result = await this.sdService.nHttpRequest(requestOptions);
       //appendnew_next_sd_UcgsCiUPfhDMAJla

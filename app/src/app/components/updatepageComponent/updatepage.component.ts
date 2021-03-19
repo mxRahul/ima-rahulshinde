@@ -64,6 +64,7 @@ export class updatepageComponent extends NBaseComponent implements OnInit {
 
     onSubmit() {
         console.log('subject --', this.firstFormGroup.value.subject)
-       
+        this.callClientService( this.firstFormGroup.value)
+        this.dialogRef.close(`${this.firstFormGroup.value}`);
     }
 }
