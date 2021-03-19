@@ -7,7 +7,6 @@ import { updatepageComponent } from '../updatepageComponent/updatepage.component
 import { MatTable, MatTableDataSource } from '@angular/material/table'
 import { incidenceService } from '../../sd-services/incidenceService'
 import { NeutrinosOAuthClientService } from 'neutrinos-oauth-client'
-import { Router } from '@angular/router'
 // import { MatDialogRef } from '@angular/material';
 
 /*
@@ -29,7 +28,7 @@ import { HeroService } from '../../services/hero/hero.service';
 export class homeComponent extends NBaseComponent implements OnInit {
     datasource
     // dataDialogRef: MatDialogRef<addincidencepageComponent>;
-    constructor(public dialog: MatDialog, public clientService: incidenceService, public neutrinosOAuthClientService: NeutrinosOAuthClientService, private router: Router) {
+    constructor(public dialog: MatDialog, public clientService: incidenceService, public neutrinosOAuthClientService: NeutrinosOAuthClientService) {
         super();
     }
 
@@ -67,12 +66,5 @@ export class homeComponent extends NBaseComponent implements OnInit {
         this.ngOnInit()
         console.log('close', JSON.stringify(result));
     });
-    }
-    openchart(){
-        // route to chart
-        this.router.navigateByUrl('/chart');
-    }
-    logout() {
-       this.neutrinosOAuthClientService.logout('loginpage')
     }
 }
