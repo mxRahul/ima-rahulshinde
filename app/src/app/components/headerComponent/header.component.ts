@@ -4,7 +4,7 @@ import { NBaseComponent } from '../../../../../app/baseClasses/nBase.component';
 import { NeutrinosOAuthClientService } from 'neutrinos-oauth-client'
 import { addincidencepageComponent } from '../addincidencepageComponent/addincidencepage.component'
 import { MatDialog } from '@angular/material/dialog';
-
+import { Router } from '@angular/router'
 
 /*
 Client Service import Example:
@@ -23,7 +23,7 @@ import { HeroService } from '../../services/hero/hero.service';
 
 export class headerComponent extends NBaseComponent implements OnInit {
 
-    constructor(public neutrinosOAuthClientService:NeutrinosOAuthClientService,public dialog:MatDialog) {
+    constructor(public neutrinosOAuthClientService:NeutrinosOAuthClientService,public dialog:MatDialog, private router:Router) {
         super();
     }
 
@@ -52,5 +52,10 @@ export class headerComponent extends NBaseComponent implements OnInit {
 
     gotohome() {
         window.open("home","_self")
+    }
+
+    openchart(){
+        // route to chart
+        this.router.navigateByUrl('/chart');
     }
 }

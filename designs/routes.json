@@ -31,7 +31,8 @@
         },
         {
             "path": "chart",
-            "component": "graphincidentComponent"
+            "component": "graphincidentComponent",
+            "canActivate": "NeutrinosAuthGuardService"
         },
         {
             "canActivate": "NeutrinosAuthGuardService",

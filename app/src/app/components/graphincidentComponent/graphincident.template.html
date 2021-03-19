@@ -1,0 +1,12 @@
+<bh-header></bh-header>
+<div fxLayout="column wrap" style="padding:16px" fxLayoutGap="16px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <h1>
+    Incident Chart</h1>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+    <div fxLayout="column wrap" fxFlex="50" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+      <div>
+        <canvas baseChart [datasets]="barChartData" *ngIf="showChart" [options]="barChartOptions" chartType="bar"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
