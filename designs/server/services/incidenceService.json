@@ -115,6 +115,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [
                 {
@@ -276,7 +277,8 @@
             ]
         ],
         "generateNext": false,
-        "generated": true
+        "generated": true,
+        "serviceName": "incidenceService"
     },
     {
         "id": "sd_CiJ6NCk8xXxGzUqr",
@@ -338,6 +340,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [
                 {
@@ -574,6 +577,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [
                 {
@@ -810,6 +814,7 @@
                 }
             }
         },
+        "uploadFileOptions": {},
         "editableListData": {
             "responses": [
                 {
@@ -970,5 +975,530 @@
             []
         ],
         "generateNext": true
+    },
+    {
+        "id": "sd_UrcR9TySPZWJ5buq",
+        "type": "Mongodb",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "adduser",
+        "databaseConfig": "sd_e1rsqEcXpIcH0233",
+        "collection": "\"user\"",
+        "options": "",
+        "resultMapping": "bh.local.result",
+        "operation": "insertOne",
+        "argumentArray": [
+            "document"
+        ],
+        "aggregate": "",
+        "operations": "",
+        "query": "bh.local.query",
+        "fieldOrSpec": "",
+        "filter": "",
+        "key": "",
+        "docId": "",
+        "indexName": "",
+        "replacement": "",
+        "update": "",
+        "xAxis": "",
+        "yAxis": "",
+        "indexes": "",
+        "docs": "bh",
+        "document": "bh.input.body",
+        "newName": "",
+        "doc": "",
+        "filePath": "",
+        "fileName": "",
+        "pipeline": "",
+        "functionName": "adduser",
+        "category": "Storage",
+        "__ssdTypeInputs__": {
+            "collection": {
+                "type": "str",
+                "value": "user",
+                "constant": false
+            },
+            "options": {
+                "type": "bh",
+                "value": "",
+                "nullable": "true",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "bh.local",
+                "value": "result",
+                "constant": false
+            },
+            "query": {
+                "type": "bh.local",
+                "value": "query",
+                "constant": false
+            },
+            "docs": {
+                "type": "bh",
+                "value": "",
+                "constant": false
+            },
+            "document": {
+                "type": "bh.input",
+                "value": "body",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 205,
+        "y": 580,
+        "wires": [
+            [
+                "sd_NWg95i5RvXlUq0CI"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_fbaOvjtq45B2QNRj",
+        "type": "HttpIn",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "server",
+        "nodeType": "start",
+        "name": "adduser",
+        "path": "/adduser",
+        "uploadpath": "",
+        "summary": "Add user Data",
+        "description": "",
+        "method": "post",
+        "sequenceId": "",
+        "consumes": "",
+        "produces": "",
+        "filetype": "path",
+        "acceptFileUpload": false,
+        "httpOptions": {
+            "/adduser": {
+                "post": {
+                    "summary": "Add user Data",
+                    "description": "",
+                    "consumes": [
+                        "application/json"
+                    ],
+                    "produces": [],
+                    "parameters": [
+                        {
+                            "in": "body",
+                            "name": "username",
+                            "description": "user name ",
+                            "required": true
+                        },
+                        {
+                            "in": "body",
+                            "name": "fullname",
+                            "description": "full name of user",
+                            "required": true
+                        },
+                        {
+                            "in": "body",
+                            "name": "subscriptiontype",
+                            "description": "subscription type",
+                            "required": true
+                        },
+                        {
+                            "in": "body",
+                            "name": "address",
+                            "description": "address of user",
+                            "required": true
+                        },
+                        {
+                            "in": "body",
+                            "name": "city",
+                            "description": "city of user",
+                            "required": true
+                        },
+                        {
+                            "in": "body",
+                            "name": "title",
+                            "description": "role of user",
+                            "required": true
+                        },
+                        {
+                            "in": "body",
+                            "name": "region",
+                            "description": "region of user",
+                            "required": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "ok"
+                        }
+                    }
+                }
+            }
+        },
+        "editableListData": {
+            "responses": [
+                {
+                    "key": "ok",
+                    "value": "200",
+                    "rowId": "sd_qy0Ql317ibbD2KbA",
+                    "valid": true
+                }
+            ],
+            "params": [
+                {
+                    "key": "username",
+                    "desc": "user name ",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_G8nLot2FAeGdWK9P",
+                    "valid": true
+                },
+                {
+                    "key": "fullname",
+                    "desc": "full name of user",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_7rgVZIBK6iWxwUdT",
+                    "valid": true
+                },
+                {
+                    "key": "subscriptiontype",
+                    "desc": "subscription type",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_uH4cSD0rOZkDveaJ",
+                    "valid": true
+                },
+                {
+                    "key": "address",
+                    "desc": "address of user",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_ajKnIC0WKysy0XQ5",
+                    "valid": true
+                },
+                {
+                    "key": "city",
+                    "desc": "city of user",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_72QdqHL5HKfA0llZ",
+                    "valid": true
+                },
+                {
+                    "key": "title",
+                    "desc": "role of user",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_WlATjmOEVWRoTUZh",
+                    "valid": true
+                },
+                {
+                    "key": "region",
+                    "desc": "region of user",
+                    "type": "body",
+                    "required": true,
+                    "rowId": "sd_1jL23HSN0V9Y3PFn",
+                    "valid": true
+                }
+            ],
+            "produces": [],
+            "consumes": [
+                {
+                    "key": "application/json",
+                    "rowId": "sd_sYcs0QroN7VICNKD",
+                    "valid": true
+                }
+            ]
+        },
+        "inputs": 0,
+        "outputs": 1,
+        "category": "HTTP",
+        "__ssdTypeInputs__": {
+            "uploadpath": {
+                "type": "str",
+                "value": "",
+                "nullable": "true",
+                "nullableValue": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 65,
+        "y": 580,
+        "wires": [
+            [
+                "sd_UrcR9TySPZWJ5buq"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService",
+        "functionName": "sd_fbaOvjtq45B2QNRj"
+    },
+    {
+        "id": "sd_NWg95i5RvXlUq0CI",
+        "type": "HttpOut",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "headers": {},
+        "responseBody": {
+            "type": "bh.local",
+            "value": "result",
+            "ssd_typedInputField": true
+        },
+        "httpcode": {
+            "type": "num",
+            "value": 200,
+            "ssd_typedInputField": true
+        },
+        "responseType": "obj",
+        "responseMapping": {
+            "status": 200,
+            "obj": "bh.local.result",
+            "send": "bh.local.result"
+        },
+        "cookies": [],
+        "inputs": 1,
+        "outputs": 0,
+        "editableListData": {
+            "headers": []
+        },
+        "cookiesList": {},
+        "switchStates": {
+            "headers": "Map",
+            "cookies": "Map"
+        },
+        "functionName": "sd_NWg95i5RvXlUq0CI",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 385,
+        "y": 580,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ZgJGi0wBzfqMHmiX",
+        "type": "Mongodb",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "getuser",
+        "databaseConfig": "sd_e1rsqEcXpIcH0233",
+        "collection": "\"user\"",
+        "options": "",
+        "resultMapping": "bh.local.result",
+        "operation": "find",
+        "argumentArray": [
+            "query"
+        ],
+        "aggregate": "",
+        "operations": "",
+        "query": "bh.local.filter",
+        "fieldOrSpec": "",
+        "filter": "",
+        "key": "",
+        "docId": "",
+        "indexName": "",
+        "replacement": "",
+        "update": "",
+        "xAxis": "",
+        "yAxis": "",
+        "indexes": "",
+        "docs": "",
+        "document": "",
+        "newName": "",
+        "doc": "",
+        "filePath": "",
+        "fileName": "",
+        "pipeline": "",
+        "functionName": "getuser",
+        "category": "Storage",
+        "__ssdTypeInputs__": {
+            "collection": {
+                "type": "str",
+                "value": "user",
+                "constant": false
+            },
+            "options": {
+                "type": "bh",
+                "value": "",
+                "nullable": "true",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "bh.local",
+                "value": "result",
+                "constant": false
+            },
+            "query": {
+                "type": "bh.local",
+                "value": "filter",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 285,
+        "y": 700,
+        "wires": [
+            [
+                "sd_F70vahHZHwIJwlhs"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_3q3aPanY6oiHoaWw",
+        "type": "HttpIn",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "server",
+        "nodeType": "start",
+        "name": "getuser",
+        "path": "/getuser",
+        "uploadpath": "",
+        "summary": "Get All Data",
+        "description": "",
+        "method": "get",
+        "sequenceId": "",
+        "consumes": "",
+        "produces": "",
+        "filetype": "path",
+        "acceptFileUpload": false,
+        "httpOptions": {
+            "/getuser": {
+                "get": {
+                    "summary": "Get All Data",
+                    "description": "",
+                    "consumes": [],
+                    "produces": [],
+                    "parameters": [
+                        {
+                            "in": "query",
+                            "name": "username",
+                            "description": "username of user",
+                            "required": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "ok"
+                        }
+                    }
+                }
+            }
+        },
+        "editableListData": {
+            "responses": [
+                {
+                    "key": "ok",
+                    "value": "200",
+                    "rowId": "sd_qy0Ql317ibbD2KbA",
+                    "valid": true
+                }
+            ],
+            "params": [
+                {
+                    "key": "username",
+                    "desc": "username of user",
+                    "type": "query",
+                    "required": true,
+                    "rowId": "sd_F7At82CUwHIk21i6",
+                    "valid": true
+                }
+            ],
+            "produces": [],
+            "consumes": []
+        },
+        "inputs": 0,
+        "outputs": 1,
+        "category": "HTTP",
+        "__ssdTypeInputs__": {
+            "uploadpath": {
+                "type": "str",
+                "value": "",
+                "nullable": "true",
+                "nullableValue": "",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "x": 65,
+        "y": 700,
+        "wires": [
+            [
+                "sd_djKzFBcApHWF8A8O"
+            ]
+        ],
+        "generateNext": true,
+        "serviceName": "incidenceService",
+        "functionName": "sd_3q3aPanY6oiHoaWw"
+    },
+    {
+        "id": "sd_F70vahHZHwIJwlhs",
+        "type": "HttpOut",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "",
+        "headers": {},
+        "responseBody": {
+            "type": "bh.local",
+            "value": "result",
+            "ssd_typedInputField": true
+        },
+        "httpcode": {
+            "type": "num",
+            "value": 200,
+            "ssd_typedInputField": true
+        },
+        "responseType": "obj",
+        "responseMapping": {
+            "status": 200,
+            "obj": "bh.local.result",
+            "send": "bh.local.result"
+        },
+        "cookies": [],
+        "inputs": 1,
+        "outputs": 0,
+        "editableListData": {
+            "headers": []
+        },
+        "cookiesList": {},
+        "switchStates": {
+            "headers": "Map",
+            "cookies": "Map"
+        },
+        "functionName": "sd_F70vahHZHwIJwlhs",
+        "category": "HTTP",
+        "__n_excludedFromValidation__": {},
+        "x": 385,
+        "y": 700,
+        "wires": [],
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_djKzFBcApHWF8A8O",
+        "type": "Script",
+        "z": "SSD_SERVICE_ID_sd_XQmFfrYUMhlFOohb",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.filter = { username: bh.input.query.username }",
+        "functionName": "sd_djKzFBcApHWF8A8O",
+        "category": "Function",
+        "__n_excludedFromValidation__": {},
+        "x": 165,
+        "y": 700,
+        "wires": [
+            [
+                "sd_ZgJGi0wBzfqMHmiX"
+            ]
+        ],
+        "generateNext": false,
+        "generated": true
     }
 ]

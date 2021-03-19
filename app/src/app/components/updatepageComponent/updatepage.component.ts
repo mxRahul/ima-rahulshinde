@@ -51,10 +51,10 @@ export class updatepageComponent extends NBaseComponent implements OnInit {
 
     ngOnInit() {
       this.firstFormGroup = this._formBuilder.group({
-        subject: ['', Validators.pattern('^[a-zA-Z \-\']+')],
-        description: ['',[Validators.required, Validators.pattern(this.validPattern)]],
-        dateValue: ['',  Validators.required],
-        priority: ['',  Validators.required]
+        subject: [this.subject, Validators.pattern('^[a-zA-Z \-\']+')],
+        description: [this.description,[Validators.required, Validators.pattern(this.validPattern)]],
+        dateValue: [this.date,  Validators.required],
+        priority: [this.priority,  Validators.required]
       });
     }
 
@@ -63,8 +63,7 @@ export class updatepageComponent extends NBaseComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log('subject --', this.subject)
-        // this.callClientService(this.firstFormGroup.value)
-        // this.dialogRef.close(`${this.firstFormGroup.value}`);
+        console.log('subject --', this.firstFormGroup.value.subject)
+       
     }
 }

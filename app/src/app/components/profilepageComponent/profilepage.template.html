@@ -1,0 +1,50 @@
+<bh-header></bh-header>
+<div fxLayout="column wrap" style="padding:16px" fxLayoutAlign="start center" [fxShow]="true" [fxHide]="false">
+  <mat-card>
+    <mat-card-title>Profile</mat-card-title>
+
+    <mat-card-subtitle>Change your data here</mat-card-subtitle>
+
+    <mat-card-content>
+      <form [formGroup]="profileForm">
+        <div fxLayout="column wrap" fxLayoutGap="16px" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="User name" [required]="false" formControlName="username" readonly="true" [disabled]="true">
+            <mat-label>Username</mat-label>
+          </mat-form-field>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Full Name" [required]="false" formControlName="displayName" readonly="true" [disabled]="true">
+            <mat-label>Full Name</mat-label>
+          </mat-form-field>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Subscription" [required]="false" formControlName="subscriptionType" readonly="true" [disabled]="true">
+            <mat-label>Subscription Type</mat-label>
+          </mat-form-field>
+          <mat-form-field [appearance]="&apos;outline&apos;">
+            <textarea matInput formControlName="address" placeholder="Address" [required]="false"></textarea>
+          </mat-form-field>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [required]="false" formControlName="city">
+            <mat-label>City</mat-label>
+          </mat-form-field>
+          <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+            <mat-select formControlName="title" placeholder="Title" [required]="false">
+              <ng-template ngFor let-option [ngForOf]="titles" let-i="index">
+                <mat-option [value]="option">{{option}}</mat-option>
+              </ng-template>
+            </mat-select>
+
+          </mat-form-field>
+          <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;">
+            <mat-select formControlName="region" placeholder="Region" [required]="false">
+              <ng-template ngFor let-option [ngForOf]="regions" let-i="index">
+                <mat-option [value]="option">{{option}}</mat-option>
+              </ng-template>
+            </mat-select>
+
+          </mat-form-field><button mat-raised-button color="primary" (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

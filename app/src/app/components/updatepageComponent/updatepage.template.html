@@ -8,31 +8,31 @@
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput placeholder="Subject" value="{{subject}}" [required]="false">
+            <input matInput placeholder="Subject" [required]="false" formControlName="subject">
 
           </mat-form-field>
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput placeholder="Description" value="{{description}}" [required]="false">
+            <input matInput placeholder="Description" [required]="false" formControlName="description">
 
           </mat-form-field>
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
           <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-            <input matInput placeholder="Priority" value="{{priority}}" [required]="false">
+            <input matInput placeholder="Priority" [required]="false" formControlName="priority">
 
           </mat-form-field>
         </div>
         <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
-          <mat-form-field style="width:210px" [appearance]="&apos;outline&apos;">
-            <input matInput placeholder="Date Picker" [matDatepicker]="picker" (dateChange)="onDate($event)" value="{{date}}" [required]="false" [disabled]="false">
+          <mat-form-field style="style:width:210px" [appearance]="&apos;outline&apos;">
+            <input matInput placeholder="Date of Incidence" [matDatepicker]="picker" (dateChange)="onDate($event)" [required]="false" [disabled]="false">
             <mat-datepicker-toggle matSuffix [for]="picker" disabled="false"></mat-datepicker-toggle>
             <mat-datepicker #picker [disabled]="false"></mat-datepicker>
 
           </mat-form-field>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="onSubmit()">Update</button></div>
+        <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true" [fxHide]="false"><button mat-raised-button color="primary" (click)="onSubmit()">Update</button></div>
       </mat-card-content>
     </mat-card>
   </div>
