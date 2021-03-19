@@ -21,7 +21,6 @@
                 "_type": "dav",
                 "_attrDef": "p"
             }
-<<<<<<< HEAD
         ],
         "c3281b79-c3d1-3d31-bc52-5f326f970f59": {
             "paletteKey": "FlexLayoutRow",
@@ -613,9 +612,6 @@
                 ]
             }
         }
-=======
-        ]
->>>>>>> 8ad4deb30eb224448ebe5fa6ab254f0023fa25d5
     },
     "a7e17487-cace-3067-a773-c707d1d7a69a": {
         "paletteKey": "NG-Form",
