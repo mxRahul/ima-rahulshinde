@@ -1,6 +1,6 @@
 export default {
   logger: {
-    level: 'error',
+    level: 'debug',
     logFile: 'logs/console.log',
     exceptionFile: 'logs/exception.log',
     transport: ['file', 'console'],
